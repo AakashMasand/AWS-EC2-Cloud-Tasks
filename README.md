@@ -31,30 +31,30 @@ The tasks and the commands to execute the tasks are as follows:
 
 1. Create a key-pair named **MyKeyPair** and save it as a **PEM** file in the home directory.
 
-**Command: python 01KeyPairGenerator.py**
+--**Command: python 01KeyPairGenerator.py**
 
 2. Launch two **t2.micro sized Amazon Linux EC2 instances** using MyKeyPair.pem generated in the previous tasks. The EC2 instances will have the following tags:
 
 - **Deployment** Tag with the value **TestSession**
 - **Name** Tag with one machine named as **TestMachineA** and other named as **TestMachineB**
 
-**Command: python 02InstanceGenerator.py**
+--**Command: python 02InstanceGenerator.py**
 
 3. Add a new tag **Inspected** with current date and time to all EC2 instances that contain the **Deployment** tag and value from the previous task.
 
-**Command: python 03InspectedTag.py**
+--**Command: python 03InspectedTag.py**
 
 4. Update that tag value of **Inspected** with current date and time to all EC2 instances that have **Name** tag with value **TestMachineA**.
 
-**Command: python 04UpdateInspected.py**
+--**Command: python 04UpdateInspected.py**
 
 5. Stop instances with **Name** tag of **TestMachineB** and contain the **Deployment** tag and value from the first task.
 
-**Command: python 05StopInstance.py**
+--**Command: python 05StopInstance.py**
 
 6. Terminate all EC2 instances with the **Deployment** tag and **TestSession** value.
 
-**Command: python 06TerminateInstance.py**
+--**Command: python 06TerminateInstance.py**
 
 
 
