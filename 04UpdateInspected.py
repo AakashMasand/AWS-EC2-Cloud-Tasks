@@ -3,8 +3,7 @@
 ====================
 
 The script is responsible for Updating the Inspected Tag with current date and time
-to all the EC2 instances that contain the ‘Inspected’ tag with value from the previous
-task and 'Name' tag having value 'TestMachineA'
+to all the EC2 instances that have 'Name' tag and value as 'TestMachineA'
 
 Author	:	Akash Masand
 Email	:	akash27@protonmail.com
@@ -31,7 +30,7 @@ for instance in instances:
 	#conditions
 	for tag in instance.tags:
 	
-		if tag['Value'] == 'TestMachineA':
+		if tag['Key'] == 'Name' and tag['Value'] == 'TestMachineA':
 			nameFound = 1
 
 		if tag['Key'] == 'Inspected':

@@ -56,9 +56,8 @@ for instance in instances:
 	if state == 'running':
 		print(instance.id+" is running")
 		ec2.create_tags(Resources = [instance.id], Tags=[{'Key': 'Deployment', 'Value':'TestSession'}])	#Creating Tag - Deployment key with value TestSession for both EC2 Instances
-		ec2.create_tags(Resources = [instance.id], Tags=[{'Key': 'Name', 'Value':'TestMachineA' if counter==2 else 'TestMachineB'}]) #Creating Tags - 
-																																	# Counter == 1 --> Name: TestMachine A
-																																	# Counter == 2 --> Name: TestMachine B
+		ec2.create_tags(Resources = [instance.id], Tags=[{'Key': 'Name', 'Value':'TestMachineA' if counter==2 else 'TestMachineB'}]) #Creating Tags - Test Machine A and B 
+																																	
 	instance.reload() #Update all the attributes of the instance to get tag information
 	print("\nTags created:")
 	for tag in instance.tags:

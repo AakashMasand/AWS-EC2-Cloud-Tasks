@@ -26,6 +26,6 @@ for instance in instances:
 		
 		inspectTime = datetime.datetime.today().strftime('%d-%m-%Y %H-%M-%S')
 		
-		if tag['Key'] == 'Deployment':
+		if tag['Key'] == 'Deployment' and tag['Value'] == 'TestSession':
 			ec2.create_tags(Resources = [instance.id], Tags=[{'Key': 'Inspected', 'Value':''+inspectTime}])
 			print("Inspected tag created for "+ instance.id+" is "+inspectTime)

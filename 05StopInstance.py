@@ -30,12 +30,12 @@ for instance in instances:
 	for tag in instance.tags:
 		
 		#condition to verify if TestMachineB exists
-		if tag['Value'] == 'TestMachineB':
+		if tag['Key'] == 'Name' and tag['Value'] == 'TestMachineB':
 			nameFound = 1
 			name = tag['Value']
 		
 		#condition to check if Deployment exists
-		if tag['Key'] == 'Deployment':
+		if tag['Key'] == 'Deployment' and tag['Value'] == 'TestSession':
 			DeploymentFound = 1
 			
 	if nameFound == 1 and DeploymentFound == 1:

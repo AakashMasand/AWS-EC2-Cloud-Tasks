@@ -5,7 +5,7 @@
 The script is responsible for generating 
 key-pairs which can be used for authentication
 when running ec2 instances in AWS.
-These key-pairs will be stored in the home folder.
+These key-pairs will be stored in the current working directory..
 
 
 Author	:	Akash Masand
