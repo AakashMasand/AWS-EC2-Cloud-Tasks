@@ -1,27 +1,27 @@
-#TechConnect Graduate Cloud Engineer Tasks to Script/Automate
+TechConnect Graduate Cloud Engineer Tasks to Script/Automate
 ============================================================
 
-##Introduction
+Introduction
 --------------
 This project contains scripts for the purpose of AWS EC2 Instances Automation with specified requirements.
 
 
-##Intended Operating System
+Intended Operating System
 ----------------------------
 
 The script has been created in Windows 10. However, the script can be executed from the terminal/command prompt of any Operating System (Windows 7,8.x,10, Linux, etc.)
 
-##Scripting Languages Used
+Scripting Languages Used
 ---------------------------
 
 Python 3 has been used as the scripting language.
 
-##Packages/Library requirements needed to run any scripts
+Packages/Library requirements needed to run any scripts
 ----------------------------------------------------------
 
 In order to run all the scripts, **boto3** library is required. **Boto3** can be installed using pip in Python.
 
-##Each Task and Commands needed to run
+Each Task and Commands needed to run
 ---------------------------------------
 
 NOTE: Please make sure that Python 3 has been installed on the system and the environment variables have been set up appropriately.
